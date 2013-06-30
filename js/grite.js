@@ -65,6 +65,12 @@ setTitle();
 setNavbar();
 loadFooter();
 $('#old-posts').bind('click', loadOlder);
+
+var post=window.location.hash.substr(1);
+if(post!='') {
+  config.posts=[post];
+}
+
 createPlaceholders();
 loadPosts();
 if (toBeLoaded == config.posts.length)
